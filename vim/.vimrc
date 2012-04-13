@@ -115,7 +115,7 @@
 
     map             <F2>        :set list!\|set list?<CR>
     map             <F3>        :set hlsearch!\|set hlsearch?<CR>
-    map             <F8>        :Man 
+    map             <F5>        :Man 
     nnoremap        K           :Man <cword><CR>
     imap            <Nul>       <Space>
 
