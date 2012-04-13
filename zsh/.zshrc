@@ -1,7 +1,7 @@
-
 HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=1000
+
 export HISTFILE SAVEHIST
 
 export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
@@ -24,15 +24,15 @@ alias reboot='sudo reboot'
 alias rc.d='sudo rc.d'
 alias kinit='kinit joanno_p'
 alias dirs='dirs -v'
-alias sakura='sakura -c 150 -r 60'
 alias pacman='pacman-color'
 alias irssi='screen -m irssi'
 alias minecraft='java -jar /opt/minecraft/minecraft.jar'
 alias gitroot='cd `git rev-parse --show-toplevel`'
+alias sakura='sakura -c 150 -r 60'
 
 PS1=$'%{\e[0;33m%}%{\e[0;32m%}Paulloz @%m %{\e[1;33m%}%1(j.#%j.)
-%{\e[0;33m%}└─→ %{\e[0m%}'
-PS2=$'%{\e[0;33m%}└─(%_)─→ %{\e[0m%}'
+%{\e[0;33m%}└─ %{\e[0m%}'
+PS2=$'%{\e[0;33m%}└─(%_)─ %{\e[0m%}'
 
 RPS1=$'%{\e[33m%}(%!) [%{\e[0;37m%}%~%{\e[0;33m%}]%{\e[0m%}'
 
@@ -68,3 +68,9 @@ for file in * ; do
 done
 cd "$currentdir"
 
+precmd () {
+  print -Pn "\e]0;%m:%~\a";
+}
+
+preexec () {
+}
