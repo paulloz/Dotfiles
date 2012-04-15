@@ -57,7 +57,6 @@
     " Configuration de list {
 
         set listchars=eol:¤,tab:>~,trail:¤
-        set list
         highlight SpecialKey cterm=underline ctermfg=red
         highlight NonText ctermfg=brown
 
