@@ -26,10 +26,10 @@ syn match   coffeeSpecialCharacter "'\\.'"
 syn match   coffeeNumber	       "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 syn region  coffeeRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[gi]\{0,2\}\s*$+ end=+/[gi]\{0,2\}\s*[;.,)\]}]+me=e-1 contains=@htmlPreproc oneline
 
-syn keyword coffeeConditional	if then else switch unless when
+syn keyword coffeeConditional	if then else switch unless when loop
 syn keyword coffeeRepeat	while for do in until of
 syn keyword coffeeBranch	break continue
-syn keyword coffeeOperator	new delete instanceof typeof not is inst and or 
+syn keyword coffeeOperator	new delete instanceof typeof not is inst and or own
 syn keyword coffeeType		Array Boolean Date Function Number Object String RegExp
 syn keyword coffeeStatement	return with super
 syn keyword coffeeBoolean	true false on off no yes
