@@ -42,6 +42,7 @@ syn keyword coffeeGlobal	self window top parent
 syn keyword coffeeMember	document event location 
 syn keyword coffeeDeprecated	escape unescape
 syn keyword coffeeReserved	abstract boolean byte char class const debugger double enum export extends final float goto implements import int interface long native package private protected public short static super synchronized throws transient volatile 
+syn keyword coffeeInclude       require
 
 if exists("coffee_fold")
     syn match	coffeeFunction	"\<function\>"
@@ -97,6 +98,7 @@ if version >= 508 || !exists("did_javascript_syn_inits")
   HiLink coffeeNull		Keyword
   HiLink coffeeBoolean		Boolean
   HiLink coffeeRegexpString	String
+  HiLink coffeeInclude          Include
 
   HiLink coffeeIdentifier	Identifier
   HiLink coffeeLabel		Label
