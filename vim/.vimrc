@@ -106,6 +106,7 @@
 " Coloration CoffeeScript / MXML{
 
     au BufWinEnter *.coffee setfiletype coffee
+    au BufWinEnter Cakefile setfiletype coffee
     au BufWinEnter *.mxml set syntax=javascript
 
 " }
