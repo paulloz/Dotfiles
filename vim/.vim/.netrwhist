@@ -1,7 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/paulloz/pfa/voicious/wwwroot/widgets/userlist'
 let g:netrw_dirhist_2='/home/paulloz/pfa/git/encre-rtmpd/sources/applications/encre/src'
 let g:netrw_dirhist_3='/home/paulloz/pfa/voicious/wwwroot/rooms/js'
 let g:netrw_dirhist_4='/home/paulloz/pfa/voicious/wwwroot/stylesheets'
 let g:netrw_dirhist_5='/home/paulloz/.config/sakura'
+let g:netrw_dirhist_6='/home/paulloz/someconf/vim/.vim'
+let g:netrw_dirhist_7='/home/paulloz/Uce.coffee/src'
+let g:netrw_dirhist_8='/home/paulloz/Uce.coffee'
+let g:netrw_dirhist_9='/etc/openafs'

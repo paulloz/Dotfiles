@@ -18,6 +18,8 @@
     runtime ftplugin/man.vim        " Load man plugin
     let $PAGER='less'
 
+    set tags=tags;/                 " Load tagfile from current directory. If no tagfile found, search in parent directory
+
 " }
 
 " Folds {
