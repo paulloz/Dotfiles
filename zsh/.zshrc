@@ -6,8 +6,9 @@ export HISTFILE SAVEHIST
 
 export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
 export EDITOR="vim"
-export PATH="/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin::/usr/bin/core_perl/:/opt/flex/bin:/usr/local/ssl/bin:/opt/eclipse:/opt/qnetsoul:/opt/java/jre/bin"
+export PATH="/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin::/usr/bin/core_perl/:/opt/flex/bin:/usr/local/ssl/bin:/opt/eclipse:/opt/qnetsoul:/opt/java/jre/bin:/opt/Komodo/bin"
 export ERL_LIBS="/usr/local/lib/yaws/"
+export TERM='xterm'
 
 alias ls='ls --color=always --group-directories-first'
 alias l='ls'
