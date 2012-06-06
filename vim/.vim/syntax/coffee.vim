@@ -29,7 +29,7 @@ syn region  coffeeRegexpString     start=+/[^/*]+me=e-1 skip=+\\\\\|\\/+ end=+/[
 syn keyword coffeeConditional	if then else switch unless when loop
 syn keyword coffeeRepeat	while for do in until of
 syn keyword coffeeBranch	break continue
-syn keyword coffeeOperator	new delete instanceof typeof not is inst and or own
+syn keyword coffeeOperator	new delete instanceof typeof not is isnt and or own
 syn keyword coffeeType		Array Boolean Date Function Number Object String RegExp
 syn keyword coffeeStatement	return with super
 syn keyword coffeeBoolean	true false on off no yes
