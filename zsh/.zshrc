@@ -30,6 +30,7 @@ alias irssi='screen -m irssi'
 alias minecraft='java -jar /opt/minecraft/minecraft.jar'
 alias gitroot='cd `git rev-parse --show-toplevel`'
 alias sakura='sakura -c 150 -r 60'
+alias extract='atool -x'
 
 PS1=$'%{\e[0;33m%}%{\e[0;32m%}Paulloz @%m %{\e[1;33m%}%1(j.#%j.)
 %{\e[0;33m%}└─ %{\e[0m%}'
@@ -61,13 +62,6 @@ setopt	AUTO_PUSHD
 
 autoload compinit
 compinit
-
-currentdir=$(pwd)
-cd "/home/paulloz/.shutils/"
-for file in * ; do
-  source "$file"
-done
-cd "$currentdir"
 
 precmd () {
   print -Pn "\e]0;%m:%~\a";
