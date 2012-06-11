@@ -1,0 +1,27 @@
+! Xressources file
+
+
+! Colors
+URxvt.transparent:          true
+URxvt.shading:              5
+URxvt.foreground:           grey
+URxvt.background:           black
+URxvt.cursorColor:          grey
+
+! Cursor
+URxvt.cursorUnderline:      true
+URxvt.cursorBlink:          true
+
+! ScrollBar
+URxvt.scrollBar:            off
+
+! Font
+URxvt.font:                 xft:Bitstream Vera Sans Mono:size=9
+
+! Icon
+URxvt.iconFile:             /usr/share/pixmaps/terminal-tango.svg
+
+! Size
+URxvt.geometry:             130x55
+
+
