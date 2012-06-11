@@ -1,0 +1,18 @@
+[user]
+  name          = Paulloz
+  email         = paul.joannon@epitech.eu
+[color]
+  diff          = auto
+  status        = auto
+  branch        = auto
+  interactive   = auto
+[alias]
+  prb           = pull --rebase
+  st            = status
+  ci            = commit
+  co            = checkout
+  svnpull       = svn rebase
+  svnpush       = svn dcommit
+	view = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
+[core]
+  excludesfile  = /home/paulloz/.gitignore
