@@ -194,4 +194,4 @@ keyboard = (
   { key = "meta-down"; id = "command"; data = "nicklist scroll +10"; },
   { key = "meta-up"; id = "command"; data = "nicklist scroll -10"; }
 );
-hilights = ( { text = "Paulloz"; color = "%U%Y"; word = "yes"; line = "yes"; } );
+hilights = ( { text = "Paulloz"; color = "%U%Y"; line = "yes"; } );

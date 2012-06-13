@@ -105,11 +105,10 @@
 
 " }
 
-" Coloration CoffeeScript / MXML{
+" Coloration CoffeeScript {
 
     au BufWinEnter *.coffee setfiletype coffee
     au BufWinEnter Cakefile setfiletype coffee
-    au BufWinEnter *.mxml set syntax=javascript
 
 " }
 
@@ -117,7 +116,8 @@
 
     map             <F2>        :set list!\|set list?<CR>
     map             <F3>        :set hlsearch!\|set hlsearch?<CR>
-    map             <F5>        :Man 
+    map             M           :Man 
+    map             B           :!git blame <C-R>%<CR>
     nnoremap        K           :Man <cword><CR>
     imap            <Nul>       <Space>
 
