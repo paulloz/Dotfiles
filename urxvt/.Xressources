@@ -1,27 +1,27 @@
-! Xressources file
+! ==== Xressources file =========================================
 
-
-! Colors
+! Tranparency
 URxvt.transparent:          true
 URxvt.shading:              5
+
+! ==== Colors ===================================================
 URxvt.foreground:           grey
 URxvt.background:           black
 URxvt.cursorColor:          grey
 
-! Cursor
+! ==== Cursor ===================================================
 URxvt.cursorUnderline:      true
 URxvt.cursorBlink:          true
 
-! ScrollBar
+! ==== ScrollBar ================================================
 URxvt.scrollBar:            off
 
-! Font
+! ==== Font =====================================================
 URxvt.font:                 xft:Bitstream Vera Sans Mono:size=9
 
-! Icon
+! ==== Icon =====================================================
 URxvt.iconFile:             /usr/share/pixmaps/terminal-tango.svg
 
-! Size
+! ==== Size =====================================================
 URxvt.geometry:             130x55
-
 

@@ -117,7 +117,7 @@
     map             <F2>        :set list!\|set list?<CR>
     map             <F3>        :set hlsearch!\|set hlsearch?<CR>
     map             M           :Man 
-    map             B           :!git blame <C-R>%<CR>
+    map             B           :Gblame<CR>
     nnoremap        K           :Man <cword><CR>
     imap            <Nul>       <Space>
 
