@@ -69,3 +69,11 @@ precmd () {
 
 preexec () {
 }
+
+function sprunge {
+    if [ -f $1 ]; then
+      cat $1 | curl -F 'sprunge=<-' http://sprunge.us
+    else
+      $@ | curl -F 'sprunge=<-' http://sprunge.us
+    fi
+}
