@@ -15,7 +15,7 @@ endif
 
 
 syn keyword coffeeCommentTodo      TODO FIXME XXX TBD contained
-syn match   coffeeLineComment      "\/\/.*" contains=@Spell,coffeeCommentTodo
+syn match   coffeeLineComment      "#.*" contains=@Spell,coffeeCommentTodo
 syn match   coffeeCommentSkip      "^[ \t]*\*\($\|[ \t]\+\)"
 syn region  coffeeComment	       start="###"  end="###" contains=@Spell,coffeeCommentTodo
 syn match   coffeeSpecial	       "\\\d\d\d\|\\."

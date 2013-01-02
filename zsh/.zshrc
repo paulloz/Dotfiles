@@ -1,80 +1,41 @@
-HISTFILE=~/.history
-HISTSIZE=1000
-SAVEHIST=1000
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
 
-export HISTFILE SAVEHIST
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
 
-export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
-export EDITOR="vim"
-export PATH="/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin::/usr/bin/core_perl/:/opt/flex/bin:/usr/local/ssl/bin:/opt/eclipse:/opt/qnetsoul:/opt/java/jre/bin:/opt/Komodo/bin"
-export ERL_LIBS="/usr/local/lib/yaws/"
-export TERM='xterm'
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls --color=always --group-directories-first'
-alias l='ls'
-alias ll='l -lh'
-alias la='l -A'
-alias lla='ll -hA'
-alias clean='rm -f .*.swp'
-alias j='jobs'
-alias mkdir='mkdir -p'
-alias grep='grep -n --color'
-alias lock='slimlock'
-alias halt='sudo halt'
-alias reboot='sudo reboot'
-alias poweroff='sudo poweroff'
-alias rc.d='sudo rc.d'
-alias kinit='kinit joanno_p'
-alias dirs='dirs -v'
-alias pacman='pacman-color'
-alias irssi='screen -m irssi'
-alias minecraft='java -jar /opt/minecraft/minecraft.jar'
-alias gitroot='cd `git rev-parse --show-toplevel`'
-alias sakura='sakura -c 150 -r 60'
-alias extract='atool -x'
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-PS1=$'%{\e[0;33m%}%{\e[0;32m%}Paulloz @%m %{\e[1;33m%}%1(j.#%j.)
-%{\e[0;33m%}└─ %{\e[0m%}'
-PS2=$'%{\e[0;33m%}└─(%_)─ %{\e[0m%}'
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-RPS1=$'%{\e[33m%}(%!) [%{\e[0;37m%}%~%{\e[0;33m%}]%{\e[0m%}'
+# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
-bindkey "^[[3~"    delete-char
-bindkey	"^[3;5~"   delete-char
-bindkey '^[[1~' beginning-of-line
-bindkey '^[[H' beginning-of-line
-bindkey '^[OH' beginning-of-line
-bindkey '^[[7~' beginning-of-line
-bindkey '^[[4~' end-of-line
-bindkey '^[[F' end-of-line
-bindkey '^[OF' end-of-line
-bindkey '^[[8~' end-of-line
-bindkey "^F" history-incremental-search-forward
-bindkey "^R" history-incremental-search-backward
-bindkey "^A" history-beginning-search-backward
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-unsetopt CORRECTALL
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-setopt	AUTO_MENU
-setopt	HIST_IGNORE_DUPS
-setopt	HIST_EXPIRE_DUPS_FIRST
-setopt	HIST_REDUCE_BLANKS
-setopt	AUTO_PUSHD
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-autoload compinit
-compinit
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
 
-precmd () {
-  print -Pn "\e]0;%m:%~\a";
-}
+source $ZSH/oh-my-zsh.sh
 
-preexec () {
-}
+# Customize to your needs...
 
-function sprunge {
-    if [ -f $1 ]; then
-      cat $1 | curl -F 'sprunge=<-' http://sprunge.us
-    else
-      $@ | curl -F 'sprunge=<-' http://sprunge.us
-    fi
-}
+source $HOME/.myzshrc

@@ -1,0 +1,46 @@
+HISTFILE=~/.history
+HISTSIZE=1000
+SAVEHIST=1000
+
+export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/java/latest/bin:/opt/eclipse
+export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
+export EDITOR=vim
+export TERM='xterm'
+
+alias ls='ls --color=always --group-directories-first'
+alias l='ls'
+alias ll='l -lh'
+alias la='l -A'
+alias lla='ll -hA'
+alias clean='rm -f .*.swp'
+alias j='jobs'
+alias mkdir='mkdir -p'
+alias grep='grep -n --color'
+alias halt='sudo halt'
+alias reboot='sudo reboot'
+alias poweroff='sudo poweroff'
+alias dirs='dirs -v'
+alias gitroot='cd `git rev-parse --show-toplevel`'
+
+bindkey "^[[3~"    delete-char
+bindkey "^[3;5~"   delete-char
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[H' beginning-of-line
+bindkey '^[OH' beginning-of-line
+bindkey '^[[7~' beginning-of-line
+bindkey '^[[4~' end-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[OF' end-of-line
+bindkey '^[[8~' end-of-line
+bindkey "^F" history-incremental-search-forward
+bindkey "^R" history-incremental-search-backward
+bindkey "^A" history-beginning-search-backward
+
+unsetopt CORRECTALL
+
+setopt	HIST_IGNORE_DUPS
+setopt	HIST_EXPIRE_DUPS_FIRST
+setopt	HIST_REDUCE_BLANKS
+setopt	AUTO_PUSHD
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
