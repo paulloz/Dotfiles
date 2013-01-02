@@ -1,4 +1,0 @@
-SET completion_char  >
-RUN nicklist.pl
-NICKLIST SCREEN
-RUN active_notice.pl
