@@ -20,6 +20,10 @@
 
     set tags=tags;/                 " Load tagfile from current directory. If no tagfile found, search in parent directory
 
+    " Clojure
+    let g:clj_highlight_builtins=1
+    let g:clj_paren_rainbow=1
+
 " }
 
 " Folds {
