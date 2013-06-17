@@ -37,6 +37,7 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^A" history-beginning-search-backward
 
 unsetopt CORRECTALL
+unsetopt SHARE_HISTORY
 
 setopt	HIST_IGNORE_DUPS
 setopt	HIST_EXPIRE_DUPS_FIRST
