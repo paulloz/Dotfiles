@@ -24,6 +24,8 @@
     let g:clj_highlight_builtins=1
     let g:clj_paren_rainbow=1
 
+    au BufEnter *.md set syntax=markdown
+
 " }
 
 " Folds {
@@ -37,7 +39,7 @@
 " }
 
 " Taille des tabulations et de l'indentation {
-    set shiftwidth=2
+    set shiftwidth=4
     set softtabstop=4
 " }
 
