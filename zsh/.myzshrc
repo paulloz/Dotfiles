@@ -28,13 +28,14 @@ bindkey '^[[1~' beginning-of-line
 bindkey '^[[H' beginning-of-line
 bindkey '^[OH' beginning-of-line
 bindkey '^[[7~' beginning-of-line
+bindkey "^A" beginning-of-line
 bindkey '^[[4~' end-of-line
 bindkey '^[[F' end-of-line
 bindkey '^[OF' end-of-line
 bindkey '^[[8~' end-of-line
+bindkey '^E' end-of-line
 bindkey "^F" history-incremental-search-forward
 bindkey "^R" history-incremental-search-backward
-bindkey "^A" history-beginning-search-backward
 
 unsetopt CORRECTALL
 unsetopt SHARE_HISTORY
