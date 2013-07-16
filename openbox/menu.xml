@@ -41,12 +41,6 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Exaile">
-    <action name="Execute">
-      <command>exaile</command>
-      <startupnotify>yes</startupnotify>
-    </action>
-  </item>
   <item label="Transmission">
     <action name="Execute">
       <command>transmission-gtk</command>
@@ -67,6 +61,14 @@
   <item label="Chrome">
     <action name="Execute">
       <command>google-chrome</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Firefox">
+    <action name="Execute">
+      <command>firefox</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>

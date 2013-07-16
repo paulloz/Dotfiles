@@ -830,7 +830,7 @@
     <application name="rxvt-unicode">
       <decor>no</decor>
     </application>
-    <application name="sakura">
+    <application class="Firefox">
       <decor>no</decor>
     </application>
     <!--
