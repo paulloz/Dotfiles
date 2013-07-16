@@ -93,8 +93,12 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Escape move scratchpad
+bindsym $mod+Escape       move scratchpad
 bindsym $mod+Shift+Escape scratchpad show
+
+bindsym XF86AudioRaiseVolume exec sh /home/paulloz/.config/volume.sh volup
+bindsym XF86AudioLowerVolume exec sh /home/paulloz/.config/volume.sh voldown
+bindsym XF86AudioMute        exec sh /home/paulloz/.config/volume.sh mute
 
 mode "resize" {
         bindsym j resize shrink width  10 px or 10 ppt
@@ -129,6 +133,7 @@ new_window pixel 1
 client.focused #77994B #547628 #EEEEEE
 
 exec --no-startup-id sh ~/.config/wallpaper/randomWallpaper.sh
+exec pnmixer
 exec $term
 exec firefox
 exec xchat
