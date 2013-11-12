@@ -2,7 +2,7 @@ HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=1000
 
-export PATH=/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/java/latest/bin:/opt/eclipse:/opt/ant/bin
+export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin
 export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
 export EDITOR=vim
 export TERM='xterm'
@@ -13,7 +13,6 @@ alias ll='l -lh'
 alias la='l -A'
 alias lla='ll -hA'
 alias clean='rm -f .*.swp'
-alias j='jobs'
 alias mkdir='mkdir -p'
 alias grep='grep -n --color'
 alias halt='sudo halt'
@@ -46,3 +45,7 @@ setopt	HIST_REDUCE_BLANKS
 setopt	AUTO_PUSHD
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source $HOME/.autoenv/activate.sh
+
+source $HOME/.profile

@@ -33,6 +33,14 @@
 </menu>
 
 <menu id="multimedia" label="Multimedia">
+  <item label="Clementine">
+    <action name="Execute">
+      <command>clementine</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <item label="Vlc">
     <action name="Execute">
       <command>vlc</command>
@@ -53,6 +61,14 @@
   <item label="Terminal">
     <action name="Execute">
       <command>lxterminal</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Sublime">
+    <action name="Execute">
+        <command>/opt/sublime/sublime_text</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>
