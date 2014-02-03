@@ -46,6 +46,4 @@ setopt	AUTO_PUSHD
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-source $HOME/.autoenv/activate.sh
-
 source $HOME/.profile
