@@ -11,6 +11,6 @@
   st            = status
   svnpull       = svn rebase
   svnpush       = svn dcommit
-  view          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
+  hist          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
 [core]
   excludesfile  = /home/paulloz/.gitignore
