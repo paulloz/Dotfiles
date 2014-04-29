@@ -199,17 +199,17 @@
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>sh /home/paulloz/.config/volume.sh volup</command>
+        <command>pulseaudio-ctl up</command>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>sh /home/paulloz/.config/volume.sh voldown</command>
+        <command>pulseaudio-ctl down</command>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>sh /home/paulloz/.config/volume.sh mute</command>
+        <command>pulseaudio-ctl mute</command>
       </action>
     </keybind>
   </keyboard>
@@ -496,9 +496,6 @@
   </menu>
   <applications>
     <application name="lxterminal">
-      <decor>no</decor>
-    </application>
-    <application class="Firefox">
       <decor>no</decor>
     </application>
   </applications>

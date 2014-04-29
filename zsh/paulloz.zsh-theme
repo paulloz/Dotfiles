@@ -1,4 +1,4 @@
-PS1='%{$fg[yellow]%}╭─[%{$reset_color%}%/%{$fg[yellow]%}]%{$reset_color%}
+PS1='%{$fg[yellow]%}╭─[%{$reset_color%}%n@%M%{$fg[yellow]%}]─[%{$reset_color%}%/%{$fg[yellow]%}]%{$reset_color%}
 %{$fg[yellow]%}╰─ %{$reset_color%}'
  
 PS2='%{$fg[yellow]%}╰─(%_)─ %{$reset_color%}'

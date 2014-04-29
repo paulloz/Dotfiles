@@ -44,6 +44,6 @@ setopt	HIST_EXPIRE_DUPS_FIRST
 setopt	HIST_REDUCE_BLANKS
 setopt	AUTO_PUSHD
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-source $HOME/.profile
+if [ -f $HOME/.profile ] ; then
+	source $HOME/.profile
+fi

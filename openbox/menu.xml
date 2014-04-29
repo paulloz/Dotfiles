@@ -41,14 +41,6 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Vlc">
-    <action name="Execute">
-      <command>vlc</command>
-      <startupnotify>
-	<enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
   <item label="Transmission">
     <action name="Execute">
       <command>transmission-gtk</command>
@@ -68,7 +60,7 @@
   </item>
   <item label="Sublime">
     <action name="Execute">
-        <command>/opt/sublime/sublime_text</command>
+        <command>/opt/sublime-text/sublime_text</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>
@@ -76,7 +68,7 @@
   </item>
   <item label="Chrome">
     <action name="Execute">
-      <command>google-chrome</command>
+      <command>chromium</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>
@@ -102,8 +94,22 @@
       <startupnotify>yes</startupnotify>
     </action>
   </item>
-  <menu id="communication" />
-  <menu id="multimedia" />
+  <item label="Vlc">
+    <action name="Execute">
+      <command>vlc</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Tiled">
+    <action name="Execute">
+      <command>tiled</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
   <separator />
   <menu id="system"/>
 </menu>
