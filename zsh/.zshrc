@@ -32,7 +32,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cake coffee cp cpanm gem git history hostory-substring-search node npm perl python rails rake rvm screen sprunge yum autojump)
+plugins=(cake coffee cp cpanm gem git history hostory-substring-search node npm perl python rails rake rvm screen sprunge yum autojump zsh-syntax-highlighting zsh-history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
