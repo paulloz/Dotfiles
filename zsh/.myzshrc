@@ -2,14 +2,14 @@ HISTFILE=~/.history
 HISTSIZE=1000
 SAVEHIST=1000
 
-export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin
+export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/bin/vendor_perl
 export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
 export EDITOR=vim
 export TERM='xterm'
 
 alias ls='ls --color=always --group-directories-first'
 alias l='ls'
-alias ll='l -lh'
+alias ll='ls++ --potsf'
 alias la='l -A'
 alias lla='ll -hA'
 alias clean='rm -f .*.swp'
