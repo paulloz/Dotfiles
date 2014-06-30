@@ -170,6 +170,7 @@
         </finalactions>
       </action>
     </keybind>
+    <!--
     <keybind key="F4">
       <action name="Execute">
         <startupnotify>
@@ -178,6 +179,7 @@
         <command>lxterminal</command>
       </action>
     </keybind>
+    -->
     <keybind key="A-F10">
       <action name="ToggleMaximize"/>
     </keybind>
@@ -497,6 +499,19 @@
   <applications>
     <application name="lxterminal">
       <decor>no</decor>
+    </application>
+    <application class="Pidgin">
+      <desktop>3</desktop>
+    </application>
+    <application name="skype">
+      <desktop>3</desktop>
+    </application>
+    <application class="Firefox">
+      <decor>no</decor>
+      <desktop>2</desktop>
+    </application>
+    <application class="Thunderbird">
+      <desktop>4</desktop>
     </application>
   </applications>
 </openbox_config>
