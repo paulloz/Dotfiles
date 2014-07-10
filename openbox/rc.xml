@@ -513,5 +513,8 @@
     <application class="Thunderbird">
       <desktop>4</desktop>
     </application>
+    <application class="keepassx">
+      <desktop>4</desktop>
+    </application>
   </applications>
 </openbox_config>

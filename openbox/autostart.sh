@@ -6,3 +6,4 @@
 (sleep 0.18 && pidgin) &
 (sleep 0.20 && firefox) &
 (sleep 0.22 && skype) &
+(sleep 0.24 && keepassx) &
