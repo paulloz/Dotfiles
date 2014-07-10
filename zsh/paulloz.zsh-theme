@@ -1,4 +1,10 @@
-PS1='%{$fg[yellow]%}╭─[%{$reset_color%}%n@%M%{$fg[yellow]%}]─[%{$reset_color%}%/%{$fg[yellow]%}]%{$reset_color%}
+function virtualenv_prompt_info() {
+    if [[ -n $VIRTUAL_ENV ]]; then
+        echo "─[%{$reset_color%}♻%{$fg[yellow]%}]"
+    fi
+}
+
+PS1='%{$fg[yellow]%}╭─[%{$reset_color%}%n@%M%{$fg[yellow]%}]─[%{$reset_color%}%/%{$fg[yellow]%}]$(virtualenv_prompt_info)%{$reset_color%}
 %{$fg[yellow]%}╰─ %{$reset_color%}'
  
 PS2='%{$fg[yellow]%}╰─(%_)─ %{$reset_color%}'
