@@ -44,6 +44,8 @@ setopt	HIST_EXPIRE_DUPS_FIRST
 setopt	HIST_REDUCE_BLANKS
 setopt	AUTO_PUSHD
 
+export PATH=$PATH:$HOME/.cabal/bin
+
 if [ -f $HOME/.profile ] ; then
 	source $HOME/.profile
 fi
