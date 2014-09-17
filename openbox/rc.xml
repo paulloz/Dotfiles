@@ -187,17 +187,17 @@
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
-      <action name="UnmaximizeFull" />
-      <action name="MaximizeVert" />
-      <action name="MoveToEdgeWest" />
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveToEdgeWest"/>
     </keybind>
     <keybind key="W-Right">
       <action name="MoveResizeTo">
         <width>50%</width>
       </action>
-      <action name="UnmaximizeFull" />
-      <action name="MaximizeVert" />
-      <action name="MoveToEdgeEast" />
+      <action name="UnmaximizeFull"/>
+      <action name="MaximizeVert"/>
+      <action name="MoveToEdgeEast"/>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
@@ -489,12 +489,13 @@
     </context>
   </mouse>
   <menu>
-       <file>menu.xml</file><hideDelay>200</hideDelay>
-       <middle>no</middle>
-       <submenuShowDelay>100</submenuShowDelay>
-       <submenuHideDelay>400</submenuHideDelay>
-       <applicationIcons>yes</applicationIcons>
-       <manageDesktops>yes</manageDesktops>
+    <file>menu.xml</file>
+    <hideDelay>200</hideDelay>
+    <middle>no</middle>
+    <submenuShowDelay>100</submenuShowDelay>
+    <submenuHideDelay>400</submenuHideDelay>
+    <applicationIcons>yes</applicationIcons>
+    <manageDesktops>yes</manageDesktops>
   </menu>
   <applications>
     <application name="lxterminal">

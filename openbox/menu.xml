@@ -22,30 +22,13 @@
     </action>
   </item>
   <separator />
-  <item label="Next wallpaper">
+  <!--<item label="Next wallpaper">
     <action name="Execute">
       <command>sh /home/paulloz/.config/wallpaper/nextWallpaper.sh</command>
     </action>
-  </item>
+  </item>-->
   <item label="Reconfigure Openbox">
     <action name="Reconfigure" />
-  </item>
-</menu>
-
-<menu id="multimedia" label="Multimedia">
-  <item label="Clementine">
-    <action name="Execute">
-      <command>clementine</command>
-      <startupnotify>
-	<enabled>yes</enabled>
-      </startupnotify>
-    </action>
-  </item>
-  <item label="Transmission">
-    <action name="Execute">
-      <command>transmission-gtk</command>
-      <startupnotify>yes</startupnotify>
-    </action>
   </item>
 </menu>
 
@@ -66,14 +49,16 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Chrome">
+  <separator />
+  <item label="Tiled">
     <action name="Execute">
-      <command>chromium</command>
+      <command>tiled</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>
     </action>
   </item>
+  <separator />
   <item label="Firefox">
     <action name="Execute">
       <command>firefox</command>
@@ -82,16 +67,42 @@
       </startupnotify>
     </action>
   </item>
+  <item label="Thunderbird">
+    <action name="Execute">
+      <command>thunderbird</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Deluge">
+    <action name="Execute">
+      <command>deluge</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <separator />
   <item label="Skype">
     <action name="Execute">
       <command>skype</command>
       <startupnotify>yes</startupnotify>
     </action>
   </item>
-  <item label="XChat">
+  <item label="Pidgin">
     <action name="Execute">
-      <command>xchat</command>
+      <command>pidgin</command>
       <startupnotify>yes</startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Popcorn Time">
+    <action name="Execute">
+      <command>popcorntime</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+      </startupnotify>
     </action>
   </item>
   <item label="Vlc">
@@ -102,9 +113,9 @@
       </startupnotify>
     </action>
   </item>
-  <item label="Tiled">
+  <item label="Steam">
     <action name="Execute">
-      <command>tiled</command>
+      <command>steam</command>
       <startupnotify>
 	<enabled>yes</enabled>
       </startupnotify>
