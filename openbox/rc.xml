@@ -199,19 +199,32 @@
       <action name="MaximizeVert"/>
       <action name="MoveToEdgeEast"/>
     </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <command>xbacklight +10</command>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <command>xbacklight -10</command>
+      </action>
+    </keybind>
+    <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>pulseaudio-ctl up</command>
+        <command>amixer set Master 10%+</command>
       </action>
     </keybind>
+    <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>pulseaudio-ctl down</command>
+        <command>amixer set Master 10%-</command>
       </action>
     </keybind>
+    <!-- Where installing pulse-audio instead, nothing needs to be changed -->
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>pulseaudio-ctl mute</command>
+        <command>amixer set Master toggle</command>
       </action>
     </keybind>
   </keyboard>
