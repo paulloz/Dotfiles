@@ -1,0 +1,12 @@
+'atom-workspace atom-text-editor':
+  'ctrl-shift-up': 'editor:move-line-up'
+  'ctrl-shift-down': 'editor:move-line-down'
+  'ctrl-m': 'autocomplete-plus:activate'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-up': 'move-up'
+  'ctrl-down': 'move-down'
+
+'.platform-linux':
+  'alt-ctrl-p': 'project-manager:toggle'
+  'alt-shift-P': 'unset!'
