@@ -14,3 +14,4 @@
   hist          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
 [core]
   excludesfile  = /home/paulloz/.gitignore
+    pager       = diff-so-fancy | less --tabs=1,5 -R
