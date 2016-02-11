@@ -25,7 +25,6 @@
       "atom-material-syntax"
     ]
   editor:
-    fontFamily: "Liberation Mono"
     fontSize: 12
     invisibles: {}
     preferredLineLength: 100
@@ -54,6 +53,7 @@
     plugins:
       "highlight-selected": true
       "minimap-hide": true
+      pigments: true
       selection: true
     scrollAnimation: true
   "project-manager":
