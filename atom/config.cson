@@ -35,6 +35,11 @@
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
     userId: "90d191b3-b4c1-9903-c304-0dd0050716cf"
+  "file-header":
+    autoAddingHeaderEnabled: true
+    email: "hello@pauljoannon.com"
+    realname: "Paul Joannon"
+    username: "Paulloz"
   "file-icons":
     onChanges: true
   "highlight-selected": {}
