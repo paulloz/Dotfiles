@@ -39,7 +39,7 @@
     autoAddingHeaderEnabled: true
     email: "hello@pauljoannon.com"
     realname: "Paul Joannon"
-    username: "Paulloz"
+    username: "paulloz"
   "file-icons":
     onChanges: true
   "highlight-selected": {}
@@ -85,9 +85,14 @@
 ".diff.source":
   editor:
     preferredLineLength: 100
+".gfm.source":
+  "file-header":
+    autoAddingHeaderEnabled: false
 ".null-grammar.plain.text":
   whitespace:
     removeTrailingWhitespace: false
 ".plain.text":
+  "file-header":
+    autoAddingHeaderEnabled: false
   whitespace:
     removeTrailingWhitespace: false
