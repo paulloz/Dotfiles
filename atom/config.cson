@@ -43,15 +43,11 @@
   "file-icons":
     onChanges: true
   "highlight-selected": {}
-  jshint:
-    validateOnlyOnSave: true
   linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-jscs":
     onlyConfig: true
-  "linter-jshint":
-    disableWhenNoJshintrcFileInPath: true
   "linter-pep8":
     maxLineLength: 100
   minimap:
