@@ -84,11 +84,13 @@
 ".gfm.source":
   "file-header":
     autoAddingHeaderEnabled: false
+    autoUpdateEnabled: false
 ".null-grammar.plain.text":
   whitespace:
     removeTrailingWhitespace: false
 ".plain.text":
   "file-header":
     autoAddingHeaderEnabled: false
+    autoUpdateEnabled: false
   whitespace:
     removeTrailingWhitespace: false
