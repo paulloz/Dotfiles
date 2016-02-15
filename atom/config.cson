@@ -7,6 +7,7 @@
       compactList: true
     ui:
       panelContrast: true
+  "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
     disabledPackages: [
@@ -18,6 +19,7 @@
       ".git"
       ".tmp"
       ".pip"
+      "*.pyc"
     ]
     projectHome: "/home/paulloz/Documents/"
     themes: [
@@ -42,14 +44,23 @@
     username: "paulloz"
   "file-icons":
     onChanges: true
+  "find-and-replace": {}
+  "fuzzy-finder": {}
+  "git-diff":
+    showIconsInEditorGutter: true
   "highlight-selected": {}
+  jshint:
+    validateOnlyOnSave: true
   linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-jscs":
     onlyConfig: true
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
   "linter-pep8":
     maxLineLength: 100
+  "markdown-preview": {}
   minimap:
     plugins:
       "highlight-selected": true
@@ -59,7 +70,10 @@
     scrollAnimation: true
   "project-manager":
     sortBy: "title"
+  "spell-check": {}
   "status-bar": {}
+  tabs:
+    enableVcsColoring: true
   "todo-show":
     ignoreThesePaths: [
       "node_modules/*"
@@ -73,6 +87,8 @@
       "File"
       "Line"
     ]
+  "tree-view":
+    hideIgnoredNames: true
   welcome:
     showOnStartup: false
 ".basic.html.text":
