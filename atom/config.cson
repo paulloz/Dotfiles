@@ -92,12 +92,14 @@
   welcome:
     showOnStartup: false
 ".basic.html.text":
-  editor:
-    preferredLineLength: 100
-".diff.source":
-  editor:
-    preferredLineLength: 100
+  "file-header":
+    autoAddingHeaderEnabled: false
+    autoUpdateEnabled: false
 ".gfm.source":
+  "file-header":
+    autoAddingHeaderEnabled: false
+    autoUpdateEnabled: false
+".html.mustache.text":
   "file-header":
     autoAddingHeaderEnabled: false
     autoUpdateEnabled: false
