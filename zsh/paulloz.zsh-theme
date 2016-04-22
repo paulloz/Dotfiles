@@ -11,11 +11,11 @@ PS2='%{$fg[yellow]%}╰─(%_)─ %{$reset_color%}'
   
 RPS1='$(git_line)'
    
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
     
 git_line() {
     if [[ $(current_branch) != "" ]]; then
-        echo "%{$fg[yellow]%}[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}] $(parse_git_dirty) %{$reset_color%}"
+        echo "$(parse_git_dirty) %{$fg[yellow]%}[%{$reset_color%}↑ $(git_commits_ahead)%{$fg[yellow]%}]-[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}]%{$reset_color%}"
     fi
 }
