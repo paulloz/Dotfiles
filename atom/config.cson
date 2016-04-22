@@ -2,6 +2,7 @@
   "autoclose-html": {}
   "autocomplete-plus": {}
   core:
+    allowPendingPaneItems: false
     autoHideMenuBar: true
     disabledPackages: [
       "vim-mode"
@@ -13,6 +14,7 @@
       ".pip"
       "*.pyc"
     ]
+    openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
       "autoclose-html"
     ]
@@ -22,8 +24,7 @@
       "atom-material-syntax"
     ]
   editor:
-    fontFamily: "Monoid"
-    fontSize: 12
+    fontFamily: "Fira Code Light"
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
