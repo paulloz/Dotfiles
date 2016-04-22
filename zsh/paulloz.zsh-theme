@@ -16,6 +16,10 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
     
 git_line() {
     if [[ $(current_branch) != "" ]]; then
-        echo "$(parse_git_dirty) %{$fg[yellow]%}[%{$reset_color%}↑ $(git_commits_ahead)%{$fg[yellow]%}]-[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}]%{$reset_color%}"
+        GCA=$(git_commits_ahead)
+        if [[ $GCA == "" ]]; then
+            GCA="0"
+        fi
+        echo "%{$fg[yellow]%}[%{$reset_color%}$(parse_git_dirty)%{$fg[yellow]%}]-[%{$reset_color%}↑ $GCA%{$fg[yellow]%}]-[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}]%{$reset_color%}"
     fi
 }
