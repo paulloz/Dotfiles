@@ -22,7 +22,8 @@
       "atom-material-syntax"
     ]
   editor:
-    fontSize: 13
+    fontFamily: "Monoid"
+    fontSize: 12
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
