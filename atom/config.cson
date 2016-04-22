@@ -1,19 +1,11 @@
 "*":
-  "atom-material-ui":
-    colors: {}
-    fonts: {}
-    tabs: {}
-    treeView:
-      compactList: true
-    ui:
-      panelContrast: true
+  "autoclose-html": {}
   "autocomplete-plus": {}
   core:
     autoHideMenuBar: true
     disabledPackages: [
       "vim-mode"
       "linter-hlint"
-      "synced-sidebar"
     ]
     ignoredNames: [
       ".git"
@@ -21,13 +13,16 @@
       ".pip"
       "*.pyc"
     ]
+    packagesWithKeymapsDisabled: [
+      "autoclose-html"
+    ]
     projectHome: "/home/paulloz/Documents/"
     themes: [
       "atom-material-ui"
       "atom-material-syntax"
     ]
   editor:
-    fontSize: 12
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 100
     showIndentGuide: true
@@ -64,9 +59,13 @@
   minimap:
     plugins:
       "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
       "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
       pigments: true
+      pigmentsDecorationsZIndex: 0
       selection: true
+      selectionDecorationsZIndex: 0
     scrollAnimation: true
   "project-manager":
     sortBy: "title"
