@@ -111,13 +111,6 @@
 
 " }
 
-" Coloration CoffeeScript {
-
-    au BufWinEnter *.coffee setfiletype coffee
-    au BufWinEnter Cakefile setfiletype coffee
-
-" }
-
 " Quelques mappages {
 
     map             <F2>        :set list!\|set list?<CR>
