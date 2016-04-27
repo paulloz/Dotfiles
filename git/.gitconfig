@@ -7,11 +7,15 @@
   branch        = auto
   interactive   = auto
 [alias]
-  prb           = pull --rebase
   st            = status
-  svnpull       = svn rebase
-  svnpush       = svn dcommit
   hist          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
+  unstage       = reset -q HEAD --
+  discard       = checkout --
+  uncommit      = reset --mixed HEAD~
+  amend         = commit --amend
+  branches      = branch -a
+  tags          = tag
+  stashes       = stash list
 [core]
   excludesfile  = /home/paulloz/.gitignore
     pager       = diff-so-fancy | less --tabs=1,5 -R
