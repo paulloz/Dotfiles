@@ -1,4 +1,11 @@
 "*":
+  "activate-power-mode":
+    autoToggle: false
+    particles:
+      size: {}
+      spawnCount: {}
+      totalCount: {}
+    screenShake: {}
   "autoclose-html": {}
   "autocomplete-plus": {}
   core:
