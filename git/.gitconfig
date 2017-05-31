@@ -19,4 +19,4 @@
   stashes       = stash list
 [core]
   excludesfile  = /home/paulloz/.gitignore
-    pager       = diff-so-fancy | less --tabs=1,5 -R
+  pager         = diff-so-fancy | less --tabs=1,5 -R
