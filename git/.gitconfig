@@ -9,7 +9,7 @@
 [alias]
   pull          = pull --ff-only
   st            = status
-  hist          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
+  kink          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
   unstage       = reset -q HEAD --
   discard       = checkout --
   uncommit      = reset --mixed HEAD~
