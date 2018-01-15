@@ -10,7 +10,7 @@ export PYTHONPATH=$PYTHONPATH:./.pip
 
 alias ls='ls --color=always --group-directories-first'
 alias l='ls'
-alias ll='ls++ --potsf'
+alias ll='ls -lhF'
 alias la='l -A'
 alias lla='ll -hA'
 alias clean='rm -f .*.swp'
