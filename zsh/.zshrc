@@ -4,10 +4,7 @@ ZSH_THEME="paulloz"
 
 COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(zsh-syntax-highlighting archlinux autojump battery bower cabal catimg coffee cp cpanm django encode64 fabric git git-extras git git-extras gitfast github gitignore heroku history history-substring-search jsontools jump node npm nyan perl pip python screen sprunge sublime svn svn-fast-info systemd urltools virtualenv)
+plugins=(autojump battery cabal catimg colored-man-pages cp cpanm debian django encode64 git git-extras git gitfast github gitignore history history-substring-search jump node npm nyan perl pip pj python screen sprunge svn svn-fast-info systemd urltools tmux virtualenv)
 
 source $ZSH/oh-my-zsh.sh
 
