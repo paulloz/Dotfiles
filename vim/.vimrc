@@ -15,14 +15,7 @@
 
     syntax enable                   " Coloration Syntaxique
 
-    runtime ftplugin/man.vim        " Load man plugin
     let $PAGER='less'
-
-    set tags=tags;/                 " Load tagfile from current directory. If no tagfile found, search in parent directory
-
-    " Clojure
-    let g:clj_highlight_builtins=1
-    let g:clj_paren_rainbow=1
 
     au BufEnter *.md set syntax=markdown
 
@@ -115,7 +108,7 @@
 
     map             <F2>        :set list!\|set list?<CR>
     map             <F3>        :set hlsearch!\|set hlsearch?<CR>
-    map             M           :Man 
+    map             M           :Man
     map             B           :Gblame<CR>
     nnoremap        K           :Man <cword><CR>
     imap            <Nul>       <Space>
@@ -150,5 +143,3 @@ function! VisualSearch(direction) range
   let @/            = l:pattern
   let @"            = l:saved_reg
 endfunction
-
-
