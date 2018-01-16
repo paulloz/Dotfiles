@@ -9,3 +9,53 @@ plugins=(autojump battery cabal catimg colored-man-pages cp cpanm debian django 
 source $ZSH/oh-my-zsh.sh
 
 source $HOME/.myzshrc
+
+export PROJECT_PATHS=(~/Documents)
+
+export HISTFILE=~/.history
+export HISTSIZE=1000
+export SAVEHIST=1000
+
+export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:$HOME/.cabal/bin
+
+export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
+export EDITOR=vim
+export TERM='xterm'
+export PYTHONPATH=$PYTHONPATH:./.pip
+
+alias ls='ls --color=always --group-directories-first'
+alias l='ls'
+alias ll='ls -lhF'
+alias la='l -A'
+alias lla='ll -hA'
+alias mkdir='mkdir -p'
+alias grep='grep -n --color'
+alias dirs='dirs -v'
+alias gitroot='cd `git rev-parse --show-toplevel`'
+
+bindkey "^[[3~"    delete-char
+bindkey "^[3;5~"   delete-char
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[H' beginning-of-line
+bindkey '^[OH' beginning-of-line
+bindkey '^[[7~' beginning-of-line
+bindkey "^A" beginning-of-line
+bindkey '^[[4~' end-of-line
+bindkey '^[[F' end-of-line
+bindkey '^[OF' end-of-line
+bindkey '^[[8~' end-of-line
+bindkey '^E' end-of-line
+bindkey "^F" history-incremental-search-forward
+bindkey "^R" history-incremental-search-backward
+
+unsetopt CORRECTALL
+unsetopt SHARE_HISTORY
+
+setopt	HIST_IGNORE_DUPS
+setopt	HIST_EXPIRE_DUPS_FIRST
+setopt	HIST_REDUCE_BLANKS
+setopt	AUTO_PUSHD
+
+if [ -f $HOME/.profile ] ; then
+	source $HOME/.profile
+fi
