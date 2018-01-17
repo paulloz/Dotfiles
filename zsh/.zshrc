@@ -60,6 +60,9 @@ alias gitroot='cd `git rev-parse --show-toplevel`'
 export PYTHONPATH=$PYTHONPATH:./.pip
 export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:$HOME/.cabal/bin
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Misc
 export EDITOR=vim
 export TERM='xterm'
