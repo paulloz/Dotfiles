@@ -27,7 +27,7 @@ unsetopt CORRECT
 unsetopt CORRECTALL
 
 # Ls
-export LS_COLORS="di=00;36:ex=01;33:ln=01;36"
+export LS_COLORS="di=00;35:ex=1;35:ln=3;35"
 alias  ls='ls --color=always --group-directories-first'
 alias  l='ls'
 alias  ll='l -lhF'
