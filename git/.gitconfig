@@ -18,5 +18,5 @@
   tags          = tag
   stashes       = stash list
 [core]
-  excludesfile = /home/paulloz/.gitignore_global
+  excludesfile  = /home/paulloz/.gitignore_global
   pager         = diff-so-fancy | less --tabs=1,5 -R
