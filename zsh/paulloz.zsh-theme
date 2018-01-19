@@ -23,8 +23,11 @@ git_line() {
 
         # Dirty or not?
         echo -n "%{$fg[yellow]%}[%{$reset_color%}$(parse_git_dirty)%{$fg[yellow]%}]-"
-        # Ahead / Behind
-        echo -n "[%{$reset_color%}↑$GCA%{$fg[yellow]%}|%{$reset_color%}$GCB↓%{$fg[yellow]%}]-"
+        git rev-parse --abbrev-ref --symbolic-full-name @{u} &> /dev/null
+        if [ $? -eq 0 ]; then
+            # Ahead / Behind
+            echo -n "[%{$reset_color%}↑$GCA%{$fg[yellow]%}|%{$reset_color%}$GCB↓%{$fg[yellow]%}]-"
+        fi
         # Branch / Hash
         echo "[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}]%{$reset_color%}"
     fi
