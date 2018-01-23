@@ -49,6 +49,15 @@ fi
 echo "Configure vim..."
 echo "    Link .vimrc"
 ln -f -s "$BASEDIR/vim/.vimrc" "$HOME"
+echo "    Install theme"
+if [[ !(-d "$HOME/.vim/pack/themes/opt/solarized8") ]];
+then
+    mkdir -p "$HOME/.vim/pack/themes/opt/"
+    git clone git@github.com:lifepillar/vim-solarized8.git "$HOME/.vim/pack/themes/opt/"
+fi
+echo "    Configure nvim"
+mkdir -p "$HOME/.config/nvim/"
+ln -f -s "$BASEDIR/vim/init.vim" "$HOME/.config/nvim/"
 echo ""
 
 # Configure zsh

@@ -34,6 +34,8 @@ alias  ll='l -lhF'
 alias  la='l -A'
 alias  lla='ll -A'
 
+alias vim='nvim'
+
 # Some keyboard special bindings
 bindkey "^[[3~"    delete-char
 bindkey "^[3;5~"   delete-char

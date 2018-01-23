@@ -36,9 +36,11 @@
 " }
 
 " Taille des tabulations et de l'indentation {
+
     set shiftwidth=4
     set softtabstop=4
     set tabstop=4
+
 " }
 
 " Interface {
