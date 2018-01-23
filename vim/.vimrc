@@ -19,6 +19,10 @@
 
     au BufEnter *.md set syntax=markdown
 
+    set background=dark
+    colorscheme solarized8_flat
+    highlight Normal ctermbg=none
+
 " }
 
 " Folds {
@@ -34,6 +38,7 @@
 " Taille des tabulations et de l'indentation {
     set shiftwidth=4
     set softtabstop=4
+    set tabstop=4
 " }
 
 " Interface {
@@ -41,7 +46,7 @@
     " Numeros de lignes a gauche {
 
         set number
-        highlight LineNr ctermfg=brown
+        highlight LineNr ctermfg=DarkMagenta
 
     " }
 
@@ -57,16 +62,17 @@
 
     " Configuration de list {
 
-        set listchars=eol:¤,tab:>~,trail:¤
-        highlight SpecialKey cterm=underline ctermfg=red
-        highlight NonText ctermfg=brown
+        set list
+        set listchars=eol:⏎,tab:‣·,trail:·,nbsp:⎵
+        highlight SpecialKey ctermfg=darkgrey
+        highlight NonText ctermfg=darkgrey
 
     " }
 
     " Highlight de la ligne courante {
 
         set cursorline
-        highlight CursorLine cterm=bold
+        highlight CursorLine cterm=bold ctermbg=none
 
     " }
 
