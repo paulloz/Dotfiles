@@ -66,7 +66,12 @@ export PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:$
 export GPG_TTY=$(tty)
 
 # Misc
-export EDITOR=vim
+if command -v nvim &>/dev/null;
+then
+    export EDITOR=nvim
+else
+    export EDITOR=vim
+fi
 export TERM='xterm'
 alias mkdir='mkdir -p'
 alias grep='grep -n --color'
