@@ -34,8 +34,6 @@ alias  ll='l -lhF'
 alias  la='l -A'
 alias  lla='ll -A'
 
-alias vim='nvim'
-
 # Some keyboard special bindings
 bindkey "^[[3~"    delete-char
 bindkey "^[3;5~"   delete-char
@@ -69,6 +67,7 @@ export GPG_TTY=$(tty)
 if command -v nvim &>/dev/null;
 then
     export EDITOR=nvim
+    alias vim='nvim'
 else
     export EDITOR=vim
 fi
