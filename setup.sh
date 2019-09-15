@@ -70,7 +70,7 @@ then
     if [[ !(-d "$HOME/.vim/pack/themes/opt/solarized8") ]];
     then
         mkdir -p "$HOME/.vim/pack/themes/opt/"
-        git clone git@github.com:lifepillar/vim-solarized8.git "$HOME/.vim/pack/themes/opt/"
+        git clone "https://github.com/lifepillar/vim-solarized8" "$HOME/.vim/pack/themes/opt/solarized8"
     fi
     if commandExist "nvim";
     then
