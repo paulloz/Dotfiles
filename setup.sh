@@ -18,76 +18,97 @@ function exitIfCommandDoesNotExist {
     fi
 }
 
+function yesOrNo {
+    while true;
+    do
+        read -p "$1 [Y/n] " yn
+        case $yn in
+            ""    ) return 0;;
+            [Yy]* ) return 0;;
+            [Nn]* ) return 1;;
+        esac
+    done
+}
+
 exitIfCommandDoesNotExist "wget"
 exitIfCommandDoesNotExist "git"
 
 # Configure git
-echo "Configure git..."
-echo "    Link .gitconfig"
-ln -f -s "$BASEDIR/git/.gitconfig" "$HOME"
-echo "    Link .gitignore_global"
-ln -f -s "$BASEDIR/git/.gitignore_global" "$HOME"
-if !(commandExist "diff-so-fancy");
+if yesOrNo "Configure git?";
 then
-    echo "    Downloade diff-so-fancy"
-    mkdir -p "$HOME/.local/bin/"
-    wget -P "$HOME/.local/bin/" "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy" &> /dev/null
-    chmod +x "$HOME/.local/bin/diff-so-fancy"
+    echo "    Link .gitconfig"
+    ln -f -s "$BASEDIR/git/.gitconfig" "$HOME"
+    echo "    Link .gitignore_global"
+    ln -f -s "$BASEDIR/git/.gitignore_global" "$HOME"
+    if !(commandExist "diff-so-fancy");
+    then
+        echo "    Downloade diff-so-fancy"
+        mkdir -p "$HOME/.local/bin/"
+        wget -P "$HOME/.local/bin/" "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy" &> /dev/null
+        chmod +x "$HOME/.local/bin/diff-so-fancy"
+    fi
+    echo ""
 fi
-echo ""
 
 # Configure htop
 if [[ -d "$HOME/.config/htop" ]];
 then
-    echo "Configure htop..."
-    echo "    Link htoprc"
-    ln -f -s "$BASEDIR/htop/htoprc" "$HOME/.config/htop/htoprc"
-    echo ""
+    if yesOrNo "Configure htop?";
+    then
+        echo "    Link htoprc"
+        ln -f -s "$BASEDIR/htop/htoprc" "$HOME/.config/htop/htoprc"
+        echo ""
+    fi
 fi
 
 # Configure vim
-echo "Configure vim..."
-echo "    Link .vimrc"
-ln -f -s "$BASEDIR/vim/.vimrc" "$HOME"
-echo "    Install theme"
-if [[ !(-d "$HOME/.vim/pack/themes/opt/solarized8") ]];
+if yesOrNo "Configure vim?";
 then
-    mkdir -p "$HOME/.vim/pack/themes/opt/"
-    git clone git@github.com:lifepillar/vim-solarized8.git "$HOME/.vim/pack/themes/opt/"
+    echo "    Link .vimrc"
+    ln -f -s "$BASEDIR/vim/.vimrc" "$HOME"
+    echo "    Install theme"
+    if [[ !(-d "$HOME/.vim/pack/themes/opt/solarized8") ]];
+    then
+        mkdir -p "$HOME/.vim/pack/themes/opt/"
+        git clone git@github.com:lifepillar/vim-solarized8.git "$HOME/.vim/pack/themes/opt/"
+    fi
+    if commandExist "nvim";
+    then
+        echo "    Configure nvim"
+        mkdir -p "$HOME/.config/nvim/"
+        ln -f -s "$BASEDIR/vim/init.vim" "$HOME/.config/nvim/"
+    fi
+    echo ""
 fi
-echo "    Configure nvim"
-mkdir -p "$HOME/.config/nvim/"
-ln -f -s "$BASEDIR/vim/init.vim" "$HOME/.config/nvim/"
-echo ""
 
 # Configure zsh
-echo "Configure zsh..."
-if ! [[ -d "$HOME/.oh-my-zsh" ]];
+if yesOrNo "Configure zsh?";
 then
-    echo "    Install oh-my-zsh"
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    if ! [[ -d "$HOME/.oh-my-zsh" ]];
+    then
+        echo "    Install oh-my-zsh"
+        sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    fi
+    echo "    Link .zshrc"
+    ln -f -s "$BASEDIR/zsh/.zshrc" "$HOME"
+    ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+    ln -f -s "$BASEDIR/zsh/paulloz.zsh-theme" "$ZSH_CUSTOM/themes/paulloz.zsh-theme"
+    if ! [[ -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]];
+    then
+        echo "    Download zsh-autosuggestions"
+        git clone "https://github.com/zsh-users/zsh-autosuggestions" "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+    fi
+    if ! [[ -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]];
+    then
+        echo "    Download zsh-syntax-highlighting"
+        git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+    fi
+    echo ""
 fi
-echo "    Link .zshrc"
-ln -f -s "$BASEDIR/zsh/.zshrc" "$HOME"
-ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
-if ! [[ -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]];
-then
-    echo "    Download zsh-autosuggestions"
-    git clone "https://github.com/zsh-users/zsh-autosuggestions" "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
-fi
-if ! [[ -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]];
-then
-    echo "    Download zsh-syntax-highlighting"
-    git clone "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
-fi
-echo ""
 
 echo "Done."
-while true;
-do
-    read -p "Start zsh? " yn
-    case $yn in
-        [Yy]* ) exec zsh;;
-        [Nn]* ) exit 0;;
-    esac
-done
+
+if yesOrNo "Start zsh?";
+then
+    exec zsh
+fi
