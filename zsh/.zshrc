@@ -75,6 +75,8 @@ export TERM='xterm'
 alias mkdir='mkdir -p'
 alias grep='grep -n --color'
 
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 if [ -f $HOME/.profile ] ; then
 	source $HOME/.profile
 fi
