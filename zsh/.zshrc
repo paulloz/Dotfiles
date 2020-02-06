@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="paulloz"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(autojump battery cabal catimg colored-man-pages cp cpanm debian django encode64 git git-extras git gitfast github gitignore history history-substring-search jump node npm perl pip pj python screen sprunge svn svn-fast-info systemd urltools thefuck tmux virtualenv zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(battery cabal catimg colored-man-pages cp cpanm debian django encode64 git git-extras git gitfast github gitignore history history-substring-search jump node npm perl pip pj python screen sprunge svn svn-fast-info systemd urltools tmux virtualenv zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -11,7 +11,7 @@ export PROJECT_PATHS=($HOME/Documents)
 
 # plugin:zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
-export ZSH_AUTOSUGGEST_STRATEGY="default"
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # History
 export   HISTFILE=~/.history
