@@ -1,34 +1,17 @@
-function virtualenv_prompt_info() {
-    if [[ -n $VIRTUAL_ENV ]]; then
-        echo "─[%{$reset_color%}♻%{$fg[yellow]%}]"
+PS1="%F{magenta}╭─[%f%~%F{magenta}]
+╰─ %f"
+
+PS2="%F{magenta} … %f"
+
+RPS1='$(rps1)'
+
+ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}%B汚い%b%f"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+rps1() {
+    if [ -n "$(git_repo_name)" ]; then
+        echo -n "$(parse_git_dirty)"
+        echo "%F{magenta}[%f$(git_prompt_short_sha)%F{magenta}@%f$(current_branch)%F{magenta}]%f"
     fi
 }
 
-PS1='%{$fg[yellow]%}╭─[%{$reset_color%}%n@%M%{$fg[yellow]%}]─[%{$reset_color%}%/%{$fg[yellow]%}]$(virtualenv_prompt_info)%{$reset_color%}
-%{$fg[yellow]%}╰─ %{$reset_color%}'
-
-PS2='%{$fg[yellow]%}╰─(%_)─ %{$reset_color%}'
-
-RPS1='$(git_line)'
-
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
-
-git_line() {
-    if [ -n "$(current_branch)" ]; then
-        GCA=$(git_commits_ahead 2> /dev/null)
-        if [[ $GCA == "" ]]; then GCA="0" fi
-        GDB=$(git_commits_behind 2> /dev/null)
-        if [[ $GCB == "" ]]; then GCB="0" fi
-
-        # Dirty or not?
-        echo -n "%{$fg[yellow]%}[%{$reset_color%}$(parse_git_dirty)%{$fg[yellow]%}]-"
-        git rev-parse --abbrev-ref --symbolic-full-name @{u} &> /dev/null
-        if [ $? -eq 0 ]; then
-            # Ahead / Behind
-            echo -n "[%{$reset_color%}↑$GCA%{$fg[yellow]%}|%{$reset_color%}$GCB↓%{$fg[yellow]%}]-"
-        fi
-        # Branch / Hash
-        echo "[%{$reset_color%}$(current_branch)%{$fg[yellow]%}:%{$reset_color%}$(git_prompt_short_sha)%{$fg[yellow]%}]%{$reset_color%}"
-    fi
-}
