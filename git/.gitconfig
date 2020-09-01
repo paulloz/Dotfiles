@@ -9,7 +9,7 @@
 [alias]
   pull          = pull --ff-only
   st            = status
-  kink          = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
+  graph         = log --graph --pretty=format:\"%C(yellow)[%h]%Creset %C(green)%an%Creset %s %C(cyan)(%cr)%Creset\"
   unstage       = reset -q HEAD --
   discard       = checkout --
   uncommit      = reset --mixed HEAD~
@@ -20,3 +20,6 @@
 [core]
   excludesfile  = /home/paulloz/.gitignore_global
   pager         = diff-so-fancy | less --tabs=1,5 -FRX
+  editor        = vim
+[pager]
+  branch        = true
