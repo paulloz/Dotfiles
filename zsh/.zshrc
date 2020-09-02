@@ -24,7 +24,7 @@ alias mkdir="mkdir -p"
 alias grep="grep -n --color"
 
 # Editors
-EDITOR=code
+EDITOR=vim
 if command -v nvim &>/dev/null;
 then
 	alias vim="nvim"
