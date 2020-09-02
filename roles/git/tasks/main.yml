@@ -1,0 +1,15 @@
+- name: link global gitignore file
+  file:
+    src: "{{ playbook_dir }}/git/.gitignore_global"
+    dest: ~/.gitignore_global
+    state: link
+- name: link configuration file
+  file:
+    src: "{{ playbook_dir }}/git/.gitconfig"
+    dest: ~/.gitconfig
+    state: link
+- name: ensure diff-so-fancy is installed and up to date
+  pacman:
+    name: diff-so-fancy
+    state: latest
+  when: ansible_distribution == 'Archlinux'

@@ -1,0 +1,12 @@
+- name: ensure htop is installed and up to date
+  package:
+    name: htop
+    state: latest
+- name: ensure bat is installed and up to date
+  package:
+    name: bat
+    state: latest
+- name: ensure atool is installed and up to date
+  package:
+    name: atool
+    state: latest
