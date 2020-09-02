@@ -1,5 +1,5 @@
-PS1="%F{magenta}╭─[%f%~%F{magenta}]
-╰─ %f"
+PS1='%F{magenta}╭─$(ps1_host)[%f%~%F{magenta}]
+╰─ %f'
 
 PS2="%F{magenta} … %f"
 
@@ -7,6 +7,12 @@ RPS1='$(rps1)'
 
 ZSH_THEME_GIT_PROMPT_DIRTY="%F{yellow}%B汚い%b%f"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+ps1_host() {
+    if [[ -v SSH_TTY ]]; then
+        echo "[%F{yellow}%n%F{magenta}@%F{yellow}%m%F{magenta}]-"
+    fi
+}
 
 rps1() {
     if [ -n "$(git_repo_name)" ]; then
