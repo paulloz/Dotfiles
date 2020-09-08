@@ -13,7 +13,6 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # Tmux
-ZSH_TMUX_AUTOSTART="true"
 ZSH_TMUX_UNICODE="true"
 
 # Load oh-my-zsh
