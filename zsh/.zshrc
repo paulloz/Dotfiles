@@ -36,6 +36,6 @@ fi
 # WSL shenanigans
 if [[ "$(< /proc/sys/kernel/osrelease)" == *microsoft* ]]; then
 	export LIBGL_ALWAYS_INDIRECT=1
-	export WSL_HOST=$(awk '/^nameserver / {print 2}' < /etc/resolv.conf)
+	export WSL_HOST=$(awk '/^nameserver / {print $2}' < /etc/resolv.conf)
 	export DISPLAY=$WSL_HOST:0
 fi
