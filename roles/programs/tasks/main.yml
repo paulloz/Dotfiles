@@ -6,7 +6,17 @@
   package:
     name: bat
     state: latest
+  when: ansible_distribution == 'Archlinux'
 - name: ensure atool is installed and up to date
   package:
     name: atool
     state: latest
+- name: ensure tmux is installed and up to date
+  package:
+    name: tmux
+    state: latest
+- name: link tmux configuration file
+  file:
+    src: "{{ playbook_dir }}/tmux/.tmux.conf"
+    dest: ~/.tmux.conf
+    state: link
