@@ -1,20 +1,32 @@
+- name: ensure git is installed and up to date
+  package:
+    name: git
+    state: latest
+  become: yes
+
 - name: ensure htop is installed and up to date
   package:
     name: htop
     state: latest
+  become: yes
+
 - name: ensure bat is installed and up to date
   package:
     name: bat
     state: latest
-  when: ansible_distribution == 'Archlinux'
+  become: yes
+
 - name: ensure atool is installed and up to date
   package:
     name: atool
     state: latest
+  become: yes
+
 - name: ensure tmux is installed and up to date
   package:
     name: tmux
     state: latest
+  become: yes
 - name: link tmux configuration file
   file:
     src: "{{ playbook_dir }}/tmux/.tmux.conf"
