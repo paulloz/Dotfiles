@@ -1,5 +1,3 @@
-$OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-
 Import-Module posh-git
 $GitPromptSettings.DefaultPromptBeforeSuffix.Text = '`n'
 $GitPromptSettings.BeforePath = '╭─['
