@@ -1,0 +1,130 @@
+{
+    // Code EOL
+    "code-eol.toggleWithWhiteSpace": true,
+    "code-eol.newlineCharacter": "¬",
+    "code-eol.returnCharacter": "⇠",
+    "code-eol.crlfCharacter": "↵",
+    // CSharp
+    "csharp.referencesCodeLens.enabled": false,
+    "csharp.testsCodeLens.enabled": false,
+    // Debug
+    "debug.onTaskErrors": "abort",
+    // Editor
+    "editor.bracketPairColorization.enabled": true,
+    "editor.cursorSurroundingLines": 3,
+    "editor.cursorWidth": 2,
+    "editor.dragAndDrop": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.formatOnType": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.lightbulb.enabled": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.showSlider": "always",
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        79,
+        99,
+        119
+    ],
+    "editor.suggest.showDeprecated": false,
+    // Explorer
+    "explorer.confirmDelete": false,
+    "explorer.excludeGitIgnore": true,
+    "explorer.incrementalNaming": "smart",
+    // Files
+    "files.associations": {
+        "*.uxml": "xml"
+    },
+    "files.exclude": {
+        ".vscode": true,
+        "*.code-workspace": true,
+        "**/*.meta": true
+    },
+    // Git
+    "git.enabled": true,
+    "git.enableStatusBarSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    // Gitlens
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.scopes": [],
+    "gitlens.currentLine.pullRequests.enabled": false,
+    "gitlens.hovers.annotations.changes": false,
+    "gitlens.hovers.currentLine.changes": false,
+    "gitlens.menus": {},
+    "gitlens.mode.statusBar.enabled": false,
+    "gitlens.outputLevel": "silent",
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.showWelcomeOnInstall": false,
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.statusBar.enabled": false,
+    "gitlens.statusBar.pullRequests.enabled": false,
+    "gitlens.telemetry.enabled": false,
+    "gitlens.virtualRepositories.enabled": false,
+    // Omnisharp
+    "omnisharp.disableMSBuildDiagnosticWarning": true,
+    "omnisharp.enableImportCompletion": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.organizeImportsOnFormat": true,
+    "omnisharp.path": "latest",
+    // Remote
+    "remote.SSH.remotePlatform": {
+        "51.38.35.254": "linux",
+        "melchior.pauljoannon.com": "linux"
+    },
+    // SCM
+    "scm.countBadge": "off",
+    // Screencast mode
+    "screencastMode.fontSize": 32,
+    "screencastMode.mouseIndicatorColor": "#d67e5c",
+    "screencastMode.mouseIndicatorSize": 44,
+    "screencastMode.onlyKeyboardShortcuts": true,
+    // Telemetry
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
+    // Terminal
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    // Todo Highlight
+    "todohighlight.isCaseSensitive": false,
+    "todohighlight.defaultStyle": {
+        "borderRadius": "0px",
+    },
+    // Window
+    "window.menuBarVisibility": "toggle",
+    // Workbench
+    "workbench.colorCustomizations": {
+        "terminal.foreground": "#CCCCCC",
+        "terminal.ansiBlack": "#0C0C0C",
+        "terminal.ansiBlue": "#0037DA",
+        "terminal.ansiCyan": "#3A96DD",
+        "terminal.ansiGreen": "#13A10E",
+        "terminal.ansiMagenta": "#881798",
+        "terminal.ansiRed": "#C50F1F",
+        "terminal.ansiWhite": "#CCCCCC",
+        "terminal.ansiYellow": "#C19C00",
+        "terminal.ansiBrightBlack": "#767676",
+        "terminal.ansiBrightBlue": "#3B78FF",
+        "terminal.ansiBrightCyan": "#61D6D6",
+        "terminal.ansiBrightGreen": "#16C60C",
+        "terminal.ansiBrightMagenta": "#B4009E",
+        "terminal.ansiBrightRed": "#E74856",
+        "terminal.ansiBrightWhite": "#F2F2F2",
+        "terminal.ansiBrightYellow": "#F9F1A5"
+    },
+    "workbench.colorTheme": "SynthWave '84",
+    "workbench.enableExperiments": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.preferredDarkColorTheme": "Shades of Purple",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tips.enabled": false,
+    "workbench.welcomePage.walkthroughs.openOnInstall": false,
+    // Zen mode
+    "zenMode.hideLineNumbers": false,
+}
