@@ -13,7 +13,7 @@ $GitPromptSettings.AfterStatus.ForegroundColor = [ConsoleColor]::Magenta
 $GitPromptSettings.DefaultPromptSuffix = '╰─ '
 $GitPromptSettings.DefaultPromptSuffix.ForegroundColor = [ConsoleColor]::Magenta
 $GitPromptSettings.EnableStashStatus = $True
-$GitPromptSettings.BranchColor.ForegroundColor = [System.ConsoleColor]::Yellow
+$GitPromptSettings.BranchColor.ForegroundColor = [System.ConsoleColor]::Cyan
 $GitPromptSettings.LocalWorkingStatusSymbol.ForegroundColor = [System.ConsoleColor]::Yellow
 $GitPromptSettings.LocalStagedStatusSymbol.ForegroundColor = [System.ConsoleColor]::Green
 $GitPromptSettings.StashColor.ForegroundColor = [System.ConsoleColor]::DarkGreen
@@ -21,6 +21,8 @@ $GitPromptSettings.BeforeStash = ' · '
 $GitPromptSettings.BeforeStash.ForegroundColor = [System.ConsoleColor]::Magenta
 $GitPromptSettings.AfterStash = '↘'
 $GitPromptSettings.AfterStash.ForegroundColor = [System.ConsoleColor]::DarkGreen
+$GitPromptSettings.IndexColor.ForegroundColor = [System.COnsoleColor]::Green
+$GitPromptSettings.WorkingColor.ForegroundColor = [System.COnsoleColor]::Red
 
 Set-PSReadlineOption -ExtraPromptLineCount 1
 
